@@ -1,7 +1,26 @@
-# netlify.toml
 [build]
   command = "npm run build"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"
+
+# ✅ Build optimizado para CMS
+[build.processing]
+  skip_processing = true
+
+# ✅ Caching para builds más rápidos
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = [
+      "node_modules/.cache",
+      "public/_cache"
+    ]
+
+# ✅ Configuración para CMS
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"
