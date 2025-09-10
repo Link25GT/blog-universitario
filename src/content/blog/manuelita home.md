@@ -4,7 +4,7 @@ description: "El Taki es una fiera y pudo dominar 2 ia´s para poder hacer esto.
 date: "2023-09-15"
 author: "Irvin Julian Gomez T."
 category: "Noticias"
-image: "/images/rector.jpg"
+image: "https://fortnite.fandom.com/es/wiki/Harley_Quinn"
 ---
 
 ¡Estimados estudiantes, profesores y personal administrativo!
