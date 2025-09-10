@@ -1,8 +1,8 @@
 ---
-title: "Bienvenida del nuevo rector"
-description: "El Dr. Javier Martínez se dirige a la comunidad universitaria en su primer día como rector."
+title: "El Taki acaba de inagurar este sitio web"
+description: "El Taki es una fiera y pudo dominar 2 ia´s para poder hacer esto."
 date: "2023-09-15"
-author: "Dr. Javier Martínez"
+author: "Irvin Julian Gomez T."
 category: "Noticias"
 image: "/images/rector.jpg"
 ---
