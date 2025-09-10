@@ -1,0 +1,31 @@
+---
+// src/components/Navigation.astro
+const navItems = [
+    { name: 'Inicio', path: '/' },
+    { name: 'Noticias', path: '/categoria/noticias' },
+    { name: 'Eventos', path: '/categoria/eventos' },
+    { name: 'Vida Universitaria', path: '/categoria/vida-universitaria' },
+    { name: 'Opinión', path: '/categoria/opinion' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="mt-4">
+    <ul class="flex flex-wrap justify-center gap-4 md:gap-8">
+        {navItems.map((item) => (
+            <li>
+                <a 
+                    href={item.path} 
+                    class={`px-3 py-2 rounded-md text-sm font-medium ${
+                        currentPath === item.path 
+                            ? 'bg-blue-100 text-blue-700' 
+                            : 'text-gray-600 hover:bg-gray-100'
+                    }`}
+                >
+                    {item.name}
+                </a>
+            </li>
+        ))}
+    </ul>
+</nav>

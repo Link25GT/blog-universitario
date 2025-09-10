@@ -1,0 +1,22 @@
+---
+// src/components/Header.astro
+import Navigation from './Navigation.astro';
+import Search from './Search.astro';
+// Eliminamos client:load
+---
+
+<header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <a href="/" class="text-2xl font-bold text-blue-600">Blog Universitario</a>
+                <p class="text-sm text-gray-600">Noticias, eventos y vida universitaria</p>
+            </div>
+            
+            <!-- Eliminamos client:load -->
+            <Search />
+        </div>
+        
+        <Navigation />
+    </div>
+</header>
