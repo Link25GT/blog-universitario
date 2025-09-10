@@ -1,42 +1,13 @@
----
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Card from '../components/Card.astro';
-
-// Obtener las entradas del blog
-const allPosts = await Astro.glob('../content/blog/*.md');
-const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
-const recentPosts = sortedPosts.slice(0, 6);
----
-
-<BaseLayout title="Blog Universitario" description="El blog oficial con las últimas noticias, eventos y artículos de opinión de nuestra universidad">
-  <div class="text-center mb-12">
-    <h1 class="text-4xl font-bold mb-4">Blog Universitario</h1>
-    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-      Descubre las últimas noticias, eventos y artículos de opinión de nuestra comunidad universitaria.
-    </p>
-  </div>
-
-  <section class="mb-12">
-    <h2 class="text-2xl font-semibold mb-6 border-b pb-2">Entradas Recientes</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {recentPosts.map((post) => (
-        <Card 
-          url={post.url} 
-          title={post.frontmatter.title}
-          excerpt={post.frontmatter.description}
-          date={post.frontmatter.date}
-          category={post.frontmatter.category}
-          image={post.frontmatter.image}
-        />
-      ))}
-    </div>
-  </section>
-
-  <section class="bg-primary-50 rounded-lg p-8 text-center">
-    <h2 class="text-2xl font-semibold mb-4">¿Quieres publicar en nuestro blog?</h2>
-    <p class="mb-6">Si eres parte de la comunidad universitaria, contáctanos para compartir tus ideas.</p>
-    <a href="/contacto" class="bg-primary-600 text-white px-6 py-3 rounded-md hover:bg-primary-700 transition-colors">
-      Contáctanos
-    </a>
-  </section>
-</BaseLayout>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Blog Universitario</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Script del CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+</body>
+</html>
